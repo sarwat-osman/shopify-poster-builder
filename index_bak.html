@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-gray-100 m-0">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  
+  <body class="h-full m-0 font-sans">
+    <div id="app">
+      <div class="col-span-full">
+        <div class="grid grid-cols-2">
+        
+          <!--- LEFT DIV -->
+          <fieldset class="border border-solid border-gray-300 p-3 m-3 rounded">
+            <legend id="input-legend" class="w-full text-sm font-medium bg-white rounded-lg outline-3 outline-black-400 text-center flex justify-center mr-2 p-2 shadow-lg"> 
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                <path fill-rule="evenodd" d="M10.362 1.093a.75.75 0 00-.724 0L2.523 5.018 10 9.143l7.477-4.125-7.115-3.925zM18 6.443l-7.25 4v8.25l6.862-3.786A.75.75 0 0018 14.25V6.443zm-8.75 12.25v-8.25l-7.25-4v7.807a.75.75 0 00.388.657l6.862 3.786z" clip-rule="evenodd" />
+              </svg>    
+              Components
+            </legend>
+
+
+            <!-- ITEMS -->
+            <strong id="items" class="text-center flex justify-center">Items</strong>
+            <div class="w-full grid grid-flow-col px-2 py-2 justify-stretch">
+              <button id="open-heading"
+                onclick=displaySection(this.id) 
+                class="bg-yellow-100 hover:bg-yellow-300 text-yellow-500 hover:text-yellow-900 font-medium rounded-lg text-sm py-2 px-4 mr-2 border-b-2 border-black-100 hover:border-black-200 rounded"
+              >
+                Heading
+              </button>
+              <button id="open-poster"
+                onclick=displaySection(this.id)
+                class="bg-green-100 hover:bg-green-300 text-green-500 hover:text-green-900 font-medium rounded-lg text-sm py-2 px-4 mr-2 border-b-2 border-black-100 hover:border-black-200 rounded"
+              >
+                Poster Image
+              </button>
+              <button id="open-description"
+                onclick=displaySection(this.id)
+                class="bg-blue-100 hover:bg-blue-300 text-blue-500 hover:text-blue-900 font-medium rounded-lg text-sm py-2 px-4 mr-2 border-b-2 border-black-100 hover:border-black-200 rounded"
+              >
+                Description
+              </button>
+            </div>
+
+          </fieldset>
+
+          <!--- -------------------------------------------------------------------------------------- -->
+
+          <!--- RIGHT DIV -->
+          <fieldset class="border border-solid border-gray-300 p-3 m-3 rounded">
+            <legend class="w-full text-sm font-medium bg-white rounded-lg outline-3 outline-black-400 text-center flex justify-center mr-2 p-2 shadow-lg"> 
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                <path fill-rule="evenodd" d="M10.362 1.093a.75.75 0 00-.724 0L2.523 5.018 10 9.143l7.477-4.125-7.115-3.925zM18 6.443l-7.25 4v8.25l6.862-3.786A.75.75 0 0018 14.25V6.443zm-8.75 12.25v-8.25l-7.25-4v7.807a.75.75 0 00.388.657l6.862 3.786z" clip-rule="evenodd" />
+              </svg>    
+              Preview
+            </legend>  
+            
+            <div class="h-screen p-8">
+
+              <h5 id="heading-display" class="text-2xl font-bold tracking-tight text-gray-900"></h5>
+
+              <img id="poster-display" class="m-5">
+
+              <p id="description-display" class="font-normal text-black-700"></p>
+            
+            </div>
+
+            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black-600 bg-white-700 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Download
+            </a>           
+
+          </fieldset>
+
+        </div> <!-- end grid col -->
+
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="js/index.js"></script>
+
+</html>
